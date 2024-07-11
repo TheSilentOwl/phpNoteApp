@@ -1,0 +1,28 @@
+nav {
+  padding: 20px;
+  height: 10vh;
+  background-color: rgb(255, 201, 201);
+  font-size: 20px;
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  min-width: 300px;
+  box-shadow: 0 1px 2.5px #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav li a {
+  color: rgb(59, 59, 59);
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  transition: 0.25s;
+  border: solid rgb(255, 113, 113) 1px;
+}
+nav li a:hover {
+  color: white;
+  background-color: rgb(248, 114, 114);
+}

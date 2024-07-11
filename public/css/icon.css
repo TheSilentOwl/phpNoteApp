@@ -1,0 +1,51 @@
+svg {
+  height: 30px;
+  width: 30px;
+  /* width: 2.6em;
+  height: 2.6em;
+  stroke: black;
+  fill: transparent;
+  stroke-width: 1pt;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round; */
+  /* stroke-dasharray: 400; */
+}
+svg:hover {
+  animation: strok 1.5s reverse;
+}
+@keyframes strok {
+
+    100% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+}
+.icon {
+  padding: 7.5px 12.5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 90%;
+  height: 2.5px;
+  transform: scale(0);
+  transition: 0.2s;
+}
+.icon:hover::after {
+  transform: scale(1);
+}
+
+main.status svg {
+  height: 100px;
+  width: 100px;
+}

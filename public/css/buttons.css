@@ -1,0 +1,46 @@
+.note-index .anchor-button {
+  background-color: rgb(87, 87, 252);
+}
+
+.anchor-button {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  margin: 30px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn.delete {
+  background-color: rgb(223, 80, 80);
+  color: white;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.anchor-button:hover {
+  transform: translateY(-1px);
+  box-shadow: -1px -1px 1px #222;
+}
+
+.btn {
+  border: none;
+  background-color: olivedrab;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: -1px -1px 1px #222;
+}
+
+.note-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

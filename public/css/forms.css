@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  border: 2.5px solid grey;
+  padding: 15px;
+  border-radius: 7.5px;
+}
+
+form input,
+form textarea {
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+input:not([type="button"]) {
+    border: 2.5px solid grey;
+    transition: 0.25s;
+  }
+  
+  input:not([type="button"]):focus {
+    outline: none;
+  }
+  
+  textarea {
+    outline: 2.5px solid grey;
+    transition: 0.25s;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    outline-color: black;
+    border-color: black;
+  }

@@ -1,0 +1,59 @@
+main {
+  padding-top: calc(12vh);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 95%;
+  margin: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+section.note-index {
+  width: 100%;
+}
+
+section.note-index ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+  align-content: stretch;
+}
+
+
+
+main.note-show {
+  justify-content: start;
+  align-items: start;
+}
+
+
+section.note-show {
+    /* background-color: green; */
+    display: flex;
+    width: 100%;
+  }
+
+
+main.note-create {
+  justify-content: center;
+  align-items: center;
+}
+
+main.note-create section {
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+section.note-create {
+  transform: scale(1.2);
+}
+

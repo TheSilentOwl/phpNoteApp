@@ -1,0 +1,11 @@
+@media screen and (min-width: 500px) {
+  section.note-index ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  section.note-index ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
