@@ -9,6 +9,7 @@
   max-width: 100%;
   transition: 0.1s;
   height: 30vh;
+  font-family: var(--playwrite);
 }
 
 .note .title {

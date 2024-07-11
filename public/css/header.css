@@ -20,7 +20,8 @@ nav li a {
   margin: 5px;
   border-radius: 10px;
   transition: 0.25s;
-  border: solid rgb(255, 113, 113) 1px;
+  font-weight: bold;
+  /* border: solid rgb(255, 113, 113) 1px; */
 }
 nav li a:hover {
   color: white;

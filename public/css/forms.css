@@ -1,6 +1,7 @@
 form {
   display: flex;
   flex-direction: column;
+  font-family: var(--ubuntu);
 }
 
 .form {
@@ -11,6 +12,7 @@ form {
 
 form input,
 form textarea {
+  font-family: var(--ubuntu);
   border: none;
   padding: 10px;
   margin: 10px 0;
