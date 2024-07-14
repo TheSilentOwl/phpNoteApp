@@ -23,18 +23,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['title'] = $validator->feedback;
         // dd($form_note_title);
     }
-    if (strlen($_POST['note-title']) > 50) {
-        $errors['title'] = $validator->feedback;
-        // dd($form_note_title);
-    }
-    if (!$validator->strCheck($_POST['note-body'], 10, 1000)) {
+    // if (strlen($_POST['note-title']) > 50) {
+    //     $errors['title'] = $validator->feedback;
+    //     // dd($form_note_title);
+    // }
+    if (!$validator->strCheck($_POST['note-body'], 10, 2000)) {
         $errors['body'] = $validator->feedback;
         // dd($form_note_body);
     }
-    if (strlen($_POST['note-body']) > 1000) {
-        $errors['body'] = $validator->feedback;
-        // dd($form_note_title);
-    }
+    // if (strlen($_POST['note-body']) > 1000) {
+    //     $errors['body'] = $validator->feedback;
+    //     // dd($form_note_title);
+    // }
     // dd("note title: {$_POST['note-title']}, note body:{$_POST['note-body']}");
     // dd(count($errors));
 

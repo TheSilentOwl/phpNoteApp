@@ -42,6 +42,8 @@ hr {
 .note-show .note {
   /* background-color: blue; */
   width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
   transition: 0s;
 }
 section.note-show .note:hover {

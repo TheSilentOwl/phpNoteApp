@@ -31,6 +31,7 @@ input:not([type="button"]) {
   textarea {
     outline: 2.5px solid grey;
     transition: 0.25s;
+    resize: none;
   }
   
   input[type="text"]:focus,
