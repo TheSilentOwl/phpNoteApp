@@ -5,14 +5,15 @@
 <main class="note-index">
     <h1>My Notes</h1>
     <div class="note-actions">
-            <a href="/notes/create" class="anchor-button">
-                create-note
-            </a>
-            <form action="" method="POST" style="display: inline-block">
-            <input type="text" name="id" value="<?= $notes[0]['user_id']?>" hidden>
+        <a href="/notes/create" class="anchor-button">
+            create-note
+        </a>
+        <form action="" method="POST" style="display: inline-block">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<?= $notes[0]['user_id'] ?>">
             <button class="btn delete">delete All</button>
         </form>
-        </div>
+    </div>
     <section class="note-index">
         <ul>
             <?php foreach ($notes as $note) : ?>
@@ -30,7 +31,7 @@
                 </a>
             <?php endforeach ?>
         </ul>
-        
+
 
 
     </section>

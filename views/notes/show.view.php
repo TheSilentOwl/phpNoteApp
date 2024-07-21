@@ -5,25 +5,26 @@
     <h1>My Notes</h1>
     <div class="note-actions">
         <a href="/notes?user_id=1" class="anchor-button">go back</a>
-        <form action="" method="POST" style="display: inline-block">
-            <input type="text" name="id" value="<?= $note['id']?>" hidden>
+        <form  method="POST" style="display: inline-block">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
             <button class="btn delete">delete</button>
         </form>
     </div>
     <section class="note-show">
-            <article class="note">
-                <article class="title">
-                    <?= htmlspecialchars($note['title']) ?>
-                </article>
-                <hr>
-                <article class="body">
-                    <?= htmlspecialchars($note['body']) ?>
-
-                </article>
+        <article class="note">
+            <article class="title">
+                <?= htmlspecialchars($note['title']) ?>
             </article>
+            <hr>
+            <article class="body">
+                <?= htmlspecialchars($note['body']) ?>
+
+            </article>
+        </article>
 
     </section>
-    
+
 
 
 
