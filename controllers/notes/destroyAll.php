@@ -1,10 +1,12 @@
 <?php
 
-use core\Database;
+
 
 $user_id = 1;
-$configure = require base_path('configure.php');
-$db = new Database($configure['database']);
+
+use core\App;
+
+$db = App::resolve('core\Database');
 
 
 $notes = $db->query(
