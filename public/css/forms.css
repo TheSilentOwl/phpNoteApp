@@ -8,6 +8,7 @@ form {
   border: 2.5px solid grey;
   padding: 15px;
   border-radius: 7.5px;
+  position: relative;
 }
 
 form input,

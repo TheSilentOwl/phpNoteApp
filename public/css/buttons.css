@@ -18,6 +18,13 @@
   margin-left: 10px;
 }
 
+a.edit {
+  background-color: rgb(223, 211, 80);
+  color: white;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
 .anchor-button:hover {
   transform: translateY(-1px);
   box-shadow: -1px -1px 1px #222;
@@ -40,7 +47,7 @@
   box-shadow: -1px -1px 1px #222;
 }
 
-.note-actions {
+.actions {
   display: flex;
   flex-direction: row;
   justify-content: center;

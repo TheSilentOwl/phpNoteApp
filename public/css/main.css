@@ -46,9 +46,13 @@ main.note-create {
   justify-content: center;
   align-items: center;
 }
+main.note-edit {
+  justify-content: center;
+  align-items: center;
+}
 
 main.note-create section {
-  height: 80vh;
+  /* height: 80vh; */
   justify-content: center;
   align-items: center;
 }

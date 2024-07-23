@@ -4,7 +4,7 @@
 
 <main class="note-index">
     <h1>My Notes</h1>
-    <div class="note-actions">
+    <div class="actions">
         <a href="/notes/create" class="anchor-button">
             create-note
         </a>

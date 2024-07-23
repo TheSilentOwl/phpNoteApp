@@ -10,19 +10,18 @@ $db = App::resolve('core\Database');
 $errors = [];
 
 
-$validator = new Validator();
 
 if (!Validator::email('someemail@gmial.com')) {
     dd('not a valid email');
 }
 
-if (!$validator->strCheck($_POST['note-title'], 5, 50)) {
-    $errors['title'] = $validator->feedback;
+if (!Validator::strCheck($_POST['note-title'], 5, 50)) {
+    $errors['title'] = Validator::$feedback;
     // dd($form_note_title);
 }
 
-if (!$validator->strCheck($_POST['note-body'], 10, 2000)) {
-    $errors['body'] = $validator->feedback;
+if (!Validator::strCheck($_POST['note-body'], 10, 2000)) {
+    $errors['body'] = Validator::$feedback;
     // dd($form_note_body);
 }
 

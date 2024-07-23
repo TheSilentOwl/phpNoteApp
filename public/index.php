@@ -20,8 +20,10 @@ $router = new core\Router();
 $routes = require base_path('routes.php');
 
 $request_uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-// dd($request_uri);
 
 $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+// dd($request_uri);
+// dd($method);
+// dd($_POST);
 // count($_POST) !== 0? dd($_SERVER['REQUEST_METHOD']): true;
 $router->route($request_uri, $method);

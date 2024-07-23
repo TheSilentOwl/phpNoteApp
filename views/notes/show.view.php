@@ -3,13 +3,9 @@
 
 <main class="note-show">
     <h1>My Notes</h1>
-    <div class="note-actions">
+    <div class="actions">
         <a href="/notes?user_id=1" class="anchor-button">go back</a>
-        <form  method="POST" style="display: inline-block">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="hidden" name="id" value="<?= $note['id'] ?>">
-            <button class="btn delete">delete</button>
-        </form>
+        <a href="/note/edit?id=<?=$note['id']?>" class="anchor-button edit">edit</a>
     </div>
     <section class="note-show">
         <article class="note">
