@@ -4,7 +4,7 @@
 
 <main>
     <section class="">
-        <h2>This is about page</h2>
+        <h2>This is about page. Hello <?=$user?></h2>
     </section>
 </main>
 

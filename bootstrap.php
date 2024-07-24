@@ -4,6 +4,8 @@ use core\Container;
 use core\Database;
 use core\App;
 
+// service containers playground
+
 $container = new Container();
 
 App::setContainer($container);

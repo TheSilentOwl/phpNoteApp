@@ -13,7 +13,7 @@ class Container
 
     public function resolve($key)
     {
-        // always check for errors (checking if this key actually exists in the array or note)
+        // always check for errors (checking if this key actually exists in the array or not)
         if (!key_exists($key, $this->bindings)) {
             throw new \Exception("No matching key as {$key} found!!!");
         }

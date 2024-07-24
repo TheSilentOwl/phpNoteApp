@@ -18,6 +18,10 @@ class Validator
     }
 
     public static function email($value) {
-        return filter_var($value, FILTER_VALIDATE_EMAIL);
+        if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+            static::$feedback = "This email is not in valid form!";
+            return false;
+        }
+        return true;
     }
 }

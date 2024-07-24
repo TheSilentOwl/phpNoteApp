@@ -8,7 +8,7 @@
 
 ?>
 <main class="note-edit">
-    <section class="note-create">
+    <section class="note-edit">
         <div class="form">
             <a href="/note?id=<?= $note['id'] ?>" style="justify-content: start">
                 <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">

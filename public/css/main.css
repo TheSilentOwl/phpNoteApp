@@ -42,22 +42,19 @@ section.note-show {
   }
 
 
-main.note-create {
+main.note-create, main.note-edit, main.register {
   justify-content: center;
   align-items: center;
 }
-main.note-edit {
-  justify-content: center;
-  align-items: center;
-}
+
 
 main.note-create section {
-  /* height: 80vh; */
   justify-content: center;
   align-items: center;
 }
 
-section.note-create {
+section.note-create, section.note-edit, section.register{
   transform: scale(1.2);
 }
+
 

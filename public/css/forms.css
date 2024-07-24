@@ -40,3 +40,13 @@ input:not([type="button"]) {
     outline-color: black;
     border-color: black;
   }
+
+  .register .form {
+    padding: 50px 20px;
+  }
+  .register form {
+    margin: 10px 0px;
+  }
+
+
+
