@@ -8,6 +8,11 @@ function dd($param)
     die();
 }
 
+function urlIs($url) {
+    // $url ??= false;
+    return $_SERVER['REQUEST_URI'] === $url;
+}
+
 function abort($code=Response::NOT_FOUND) {
     http_response_code($code);
     view("$code.php");

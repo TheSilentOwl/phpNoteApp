@@ -31,7 +31,6 @@ $user = $db->query('select * from users where email = :email', [
 ])->find();
 
 
-
 if ($user) {
     header('location: /');
     exit();

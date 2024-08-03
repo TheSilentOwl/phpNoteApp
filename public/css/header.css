@@ -14,6 +14,16 @@ nav {
   z-index: 1000;
 }
 
+nav ul:nth-child(2) {
+  transform: translate(45px);
+}
+ 
+@media (max-width: 900px) {
+  nav ul:nth-child(2) {
+    transform: translate(0);
+  }
+}
+
 nav li a {
   color: rgb(59, 59, 59);
   padding: 10px;
@@ -23,7 +33,36 @@ nav li a {
   font-weight: bold;
   /* border: solid rgb(255, 113, 113) 1px; */
 }
-nav li a:hover {
+nav ul:not(.credential-handlers) li a:hover {
+  color: white;
+  background-color: rgb(252, 167, 167);
+}
+nav li a.active {
   color: white;
   background-color: rgb(248, 114, 114);
+}
+nav .credential-handlers {
+  justify-content: center;
+  align-items: center;
+}
+nav .credential-handlers a {
+  font-weight: bold;
+  position: relative;
+
+}
+
+nav .credential-handlers a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 107, 107);
+  transform: scale(0);
+  transition: .3s;
+
+}
+nav .credential-handlers a:hover::after {
+  transform: scale(1);
 }
