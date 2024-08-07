@@ -53,3 +53,7 @@ a.edit {
   justify-content: center;
   align-items: center;
 }
+
+.user-actions .btn {
+  background-color: transparent;
+}

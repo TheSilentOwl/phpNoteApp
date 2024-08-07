@@ -1,11 +1,11 @@
 <?php
 
-$user_id = 1;
 
 use core\App;
 
 $db = App::resolve('core\Database');
-// dd($_GET['user_id']);
+
+$user_id = FindCurrentUser($db);
 
 $note = $db->query(
     "select * from notes where id = :id",

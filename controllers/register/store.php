@@ -26,6 +26,7 @@ if (!empty($errors)) {
 
 //check if this user already exists (db)
 $db = App::resolve(Database::class);
+
 $user = $db->query('select * from users where email = :email', [
     'email' => $email
 ])->find();
@@ -38,12 +39,15 @@ if ($user) {
 
 $db->query('insert into users (email, password) values (:email, :password)', [
     'email' => $email,
-    'password' => $password,
+    'password' => password_hash($password, PASSWORD_BCRYPT)
 ]);
 
-$_SESSION['user'] = [
+
+
+login([
     'email' => $email
-];
+]);
+
 
 // dd($_SESSION['user']['email']);
 

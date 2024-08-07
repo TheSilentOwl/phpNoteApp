@@ -42,18 +42,21 @@ section.note-show {
   }
 
 
-main.note-create, main.note-edit, main.register {
+main.note-create, main.note-edit, main.register, main.login {
   justify-content: center;
   align-items: center;
 }
 
+main.register, main.login {
+  padding-top: 0;
+}
 
 main.note-create section {
   justify-content: center;
   align-items: center;
 }
 
-section.note-create, section.note-edit, section.register{
+section.note-create, section.note-edit, section.register, section.login{
   transform: scale(1.2);
 }
 

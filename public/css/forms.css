@@ -21,32 +21,47 @@ form textarea {
 }
 
 input:not([type="button"]) {
-    border: 2.5px solid grey;
-    transition: 0.25s;
-  }
-  
-  input:not([type="button"]):focus {
-    outline: none;
-  }
-  
-  textarea {
-    outline: 2.5px solid grey;
-    transition: 0.25s;
-    resize: none;
-  }
-  
-  input[type="text"]:focus,
-  textarea:focus {
-    outline-color: black;
-    border-color: black;
-  }
+  border: 2.5px solid grey;
+  transition: 0.25s;
+}
 
-  .register .form {
-    padding: 50px 20px;
-  }
-  .register form {
-    margin: 10px 0px;
-  }
+input:not([type="button"]):focus {
+  outline: none;
+}
 
+textarea {
+  outline: 2.5px solid grey;
+  transition: 0.25s;
+  resize: none;
+}
 
+input[type="text"]:focus,
+textarea:focus {
+  outline-color: black;
+  border-color: black;
+}
 
+.register .form,
+.login .form {
+  width: 250px;
+  height: 350px;
+  padding: 50px 20px;
+  position: relative;
+  /* word-wrap: break-word; */
+}
+.register form,
+.login .form {
+  margin: 10px 0px;
+}
+
+.register .form a,
+.login .form a {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.register .form .actions .btn,
+.login .form .actions .btn {
+  transform: translateY(30px);
+}

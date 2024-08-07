@@ -6,7 +6,7 @@ $router->get('/about', 'controllers/about.php');
 $router->get('/contact', 'controllers/contact.php');
 
 // ----------------------------------------------------
-$router->get('/notes', 'controllers/notes/index.php')->only('nothing');
+$router->get('/notes', 'controllers/notes/index.php')->only('auth');
 $router->delete('/notes', 'controllers/notes/destroyAll.php');
 
 $router->get('/note', 'controllers/notes/show.php')->only('auth');
@@ -19,3 +19,7 @@ $router->post('/notes', 'controllers/notes/store.php');
 
 $router->get('/register', 'controllers/register/create.php')->only('guest');
 $router->post('/register', 'controllers/register/store.php');
+
+$router->get('/session/create', 'controllers/session/create.php')->only('guest');
+$router->post('/session', 'controllers/session/store.php')->only('guest');
+$router->delete('/session', 'controllers/session/delete.php')->only('auth');

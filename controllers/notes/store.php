@@ -1,15 +1,14 @@
 <?php
 
-$user_id = 1;
-
 use core\Validator;
 
 use core\App;
 
 $db = App::resolve('core\Database');
+
+$user_id = FindCurrentUser($db);
+
 $errors = [];
-
-
 
 if (!Validator::email('someemail@gmial.com')) {
     dd('not a valid email');
@@ -39,7 +38,9 @@ $db->query("insert into notes (title, body, user_id) values(
     ':body' => $_POST['note-body'],
     ':user_id' => $user_id
 ]);
+
 $_POST = [];
+
 header('location: /notes');
 exit();
 

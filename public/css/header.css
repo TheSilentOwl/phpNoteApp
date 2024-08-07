@@ -48,7 +48,7 @@ nav .credential-handlers {
 nav .credential-handlers a {
   font-weight: bold;
   position: relative;
-
+  display: flex;
 }
 
 nav .credential-handlers a::after {

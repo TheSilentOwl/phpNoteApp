@@ -14,10 +14,18 @@ class Middleware
 
     static function resolve($key)
     {
-        $middleware = static::Map[$key] ?? false;
-
-        if ($middleware) {
-            (new $middleware)->handle();
+        if (!$key) { // if no middleware provided exit
+            return;
         }
+        
+        $middleware = static::Map[$key] ?? false; 
+
+        // if middleware provided, but does not exist in Map throw an exception
+
+        if (!$middleware) {
+            throw new \Exception("This $middleware does not exist");
+        }
+
+        (new $middleware)->handle(); // otherwise: googd to go
     }
 }
