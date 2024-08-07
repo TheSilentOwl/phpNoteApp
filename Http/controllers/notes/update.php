@@ -1,13 +1,14 @@
 <?php
 
-$errors = [];
+
 
 use core\App;
+use Core\Authenticator;
 use core\Validator;
 
 $db = App::resolve('core\Database');
 
-$user_id = FindCurrentUser($db);
+$user_id = Authenticator::FindCurrentUser();
 
 $note = $db->query(
     "select * from notes where id = :id",
@@ -17,9 +18,10 @@ $note = $db->query(
 )->findOrFail(); // the query method on the db class returns an intance of the class itself!
 
 
-
 authorize($note['user_id'] == $user_id);
 
+
+$errors = [];
 if (!Validator::strCheck($_POST['note-title'], 5, 50)) {
     $errors['title'] = Validator::$feedback;
 }
@@ -45,5 +47,5 @@ $db->query('update notes set title = :title, body = :body where id = :id', [
 
 
 // $_POST = [];
-header('location: /notes');
-exit();
+
+redirect('/notes');

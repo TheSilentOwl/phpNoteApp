@@ -41,33 +41,9 @@ function view($path, $data = [])
     require base_path("views/$path");
 }
 
-function login($user)
+
+function redirect($path)
 {
-    $_SESSION['user'] = [
-        'email' => $user['email']
-    ];
-
-    session_regenerate_id(true);
-}
-
-function logout()
-{
-    $_SESSION = []; // clear the session superglobal
-
-    session_destroy(); // destroy the server session file
-
-    $params = session_get_cookie_params();
-    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly'],); // destroy the cookie file on the client
-
-    header('location: /');
+    header('location: ' . $path);
     exit();
-}
-
-function FindCurrentUser($db)
-{
-    $user = $db->query('select * from users where email = :email', [
-        'email' => $_SESSION['user']['email']
-    ])->find();
-
-    return $user['id'];
 }

@@ -1,15 +1,12 @@
 <?php
 
-
-$errors = [];
-
-// dd("edit");
+use Core\Authenticator;
 use core\App;
 
 
 $db = App::resolve('core\Database');
 
-$user_id = FindCurrentUser($db);
+$user_id = Authenticator::FindCurrentUser();
 
 $note = $db->query(
     "select * from notes where id = :id",
@@ -20,8 +17,9 @@ $note = $db->query(
 
 
 
-authorize($note['user_id'] == $user_id);
+authorize($note['user_id'] === $user_id);
 
+$errors = [];
 
 view('notes/edit.view.php', [
     'note' => $note,

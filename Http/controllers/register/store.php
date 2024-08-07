@@ -2,6 +2,7 @@
 
 use core\Validator;
 use core\App;
+use Core\Authenticator;
 use core\Database;
 
 $email = $_POST['email'];
@@ -44,14 +45,13 @@ $db->query('insert into users (email, password) values (:email, :password)', [
 
 
 
-login([
+Authenticator::login([
     'email' => $email
 ]);
 
 
-// dd($_SESSION['user']['email']);
 
-header('location: /notes');
+redirect('/notes');
 
 
     // if so redirects them to login page

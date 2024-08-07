@@ -1,10 +1,11 @@
 <?php
 
 use core\App;
+use Core\Authenticator;
 
 $db = App::resolve('core\Database');
 
-$user_id = FindCurrentUser($db);
+$user_id = Authenticator::FindCurrentUser();
 
 $note = $db->query(
     "select * from notes where id = :id",
@@ -19,5 +20,4 @@ $db->query('delete from notes where id = :id', [
     'id' => $note['id']
 ]);
 
-header('location: /notes');
-exit();
+redirect('/notes');

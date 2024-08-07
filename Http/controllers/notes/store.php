@@ -3,10 +3,11 @@
 use core\Validator;
 
 use core\App;
+use Core\Authenticator;
 
-$db = App::resolve('core\Database');
 
-$user_id = FindCurrentUser($db);
+$user_id = Authenticator::FindCurrentUser();
+
 
 $errors = [];
 
@@ -31,6 +32,8 @@ if (!empty($errors)) {
     ]);
 }
 
+$db = App::resolve('core\Database');
+
 $db->query("insert into notes (title, body, user_id) values(
         :title, :body, :user_id
          )", [
@@ -41,7 +44,6 @@ $db->query("insert into notes (title, body, user_id) values(
 
 $_POST = [];
 
-header('location: /notes');
-exit();
+redirect('/notes');
 
 // dd(isset($errors));
