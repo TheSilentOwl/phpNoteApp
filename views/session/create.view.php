@@ -12,12 +12,12 @@
             <h2>Sign in</h2>
             <form method="POST" action="/session">
 
-                <input type="text" name="email" id="email" value="<?= $_POST['email'] ?? '' ?>" placeholder="email">
+                <input type="text" name="email" id="email" value="<?= $email ?>" placeholder="email">
 
-                <input type="text" name="password" id="password"  value="<?= $_POST['password'] ?? '' ?>" cols="30" rows="10" placeholder="password"> </input>
-                
-                <?php if (isset($errors['login'])) : ?>
-                    <p style="color: red; font-size: 12.5px;"><?= $errors['login'] ?></p>
+                <input type="text" name="password" id="password" value="<?= $_POST['password'] ?? '' ?>" cols="30" rows="10" placeholder="password"> </input>
+
+                <?php if (isset($errors)) : ?>
+                    <p style="color: red; font-size: 12.5px;"><?= $errors['login'] ?? '' ?></p>
                 <?php endif ?>
 
                 <div class="actions">

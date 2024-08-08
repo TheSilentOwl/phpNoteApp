@@ -3,3 +3,4 @@
 use Core\Authenticator;
 
 Authenticator::logout();
+redirect('/');

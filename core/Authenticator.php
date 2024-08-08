@@ -38,15 +38,14 @@ class Authenticator
 
     static function logout()
     {
-        $_SESSION = []; // clear the session superglobal
+        Session::flush();// clear the session superglobal
 
         session_destroy(); // destroy the server session file
 
         $params = session_get_cookie_params();
         setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly'],); // destroy the cookie file on the client
 
-        header('location: /');
-        exit();
+        
     }
 
     static function FindCurrentUser()

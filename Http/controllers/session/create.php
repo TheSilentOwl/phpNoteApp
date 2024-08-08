@@ -1,4 +1,13 @@
-<?php 
+<?php
 
+use Core\Session;
 
-view('session/create.view.php');
+// dd(Session::getFlash('errors')['login'] ?? []);
+view(
+    'session/create.view.php',
+    [
+        'errors' => Session::get('errors'),
+        'email' => old('email')
+        
+    ]
+);
